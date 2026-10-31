@@ -1,0 +1,1 @@
+-> Covering index range scan on salaries using idx_emp_salary

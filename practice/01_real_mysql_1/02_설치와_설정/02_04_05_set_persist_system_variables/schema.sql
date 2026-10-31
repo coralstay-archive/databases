@@ -1,0 +1,3 @@
+-- @engine: mysql
+-- [사전 준비 스키마 및 Mock Data]
+-- 시스템 변수 실습 환경

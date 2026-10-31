@@ -1,0 +1,104 @@
+# ==============================================================================
+# Database Containers Specification (OrbStack & Podman 호환 OCI 표준 Compose)
+# ==============================================================================
+services:
+  mysql:
+    image: docker.io/library/mysql:8.4
+    container_name: db_practice_mysql
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 256M
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-practice_db}
+      MYSQL_USER: ${MYSQL_USER:-practice}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-practice}
+    ports:
+      - "${MYSQL_PORT:-13306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "${MYSQL_USER:-practice}", "-p${MYSQL_PASSWORD:-practice}"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    command: >
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_unicode_ci
+
+  postgres:
+    image: docker.io/library/postgres:17-alpine
+    container_name: db_practice_postgres
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 128M
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-root}
+      POSTGRES_DB: ${POSTGRES_DB:-practice_db}
+    ports:
+      - "${POSTGRES_PORT:-15432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-practice_db}"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  mongo:
+    image: docker.io/library/mongo:7.0
+    container_name: db_practice_mongo
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 256M
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER:-root}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:-root}
+      MONGO_INITDB_DATABASE: ${MONGO_DATABASE:-practice_db}
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  oracle:
+    image: docker.io/gvenzl/oracle-free:latest
+    container_name: db_practice_oracle
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2.0G
+        reservations:
+          memory: 1.2G
+    environment:
+      ORACLE_PASSWORD: ${ORACLE_PASSWORD:-root}
+      APP_USER: ${APP_USER:-practice}
+      APP_USER_PASSWORD: ${APP_USER_PASSWORD:-practice}
+    ports:
+      - "${ORACLE_PORT:-11521}:1521"
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/oracle/checkDBStatus.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  mysql_data:
+  postgres_data:
+  mongo_data:
+  oracle_data:

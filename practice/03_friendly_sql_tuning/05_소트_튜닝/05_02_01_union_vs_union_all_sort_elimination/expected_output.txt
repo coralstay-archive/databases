@@ -1,0 +1,5 @@
+| Id  | Operation           | Name         |
+|   0 | SELECT STATEMENT    |              |
+|   1 |  UNION-ALL          |              |
+|*  2 |   TABLE ACCESS FULL | PAYMENT_CARD |
+|*  3 |   TABLE ACCESS FULL | PAYMENT_BANK |

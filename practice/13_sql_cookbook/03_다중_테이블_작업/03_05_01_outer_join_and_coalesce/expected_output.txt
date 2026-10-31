@@ -1,0 +1,4 @@
+deptno | dname
+10     | ACCOUNTING
+40     | OPERATIONS
+(2 rows selected)

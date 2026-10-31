@@ -1,0 +1,4 @@
+event_id | user_id | action | client_os 
+----------+---------+--------+-----------
+        1 |     101 | login  | macOS
+        3 |     103 | login  | Linux

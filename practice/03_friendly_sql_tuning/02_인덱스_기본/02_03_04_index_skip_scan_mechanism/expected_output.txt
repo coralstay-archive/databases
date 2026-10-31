@@ -1,0 +1,4 @@
+| Id  | Operation                   | Name               |
+|   0 | SELECT STATEMENT            |                    |
+|   1 |  TABLE ACCESS BY INDEX ROWID| EMPLOYEE_SKIP      |
+|*  2 |   INDEX SKIP SCAN           | IDX_EMP_GENDER_SAL |

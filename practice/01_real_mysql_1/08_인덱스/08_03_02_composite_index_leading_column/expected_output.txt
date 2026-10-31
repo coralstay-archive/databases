@@ -1,0 +1,2 @@
+-> Filter: (dept_emp.emp_no >= 10002)  (cost=... rows=1)
+    -> Index range scan on dept_emp using PRIMARY

@@ -1,0 +1,19 @@
+-- @engine: mysql
+-- [사전 준비 스키마 및 Mock Data]
+CREATE TABLE IF NOT EXISTS sales_history (
+    id INT NOT NULL,
+    sale_date DATE NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (id, sale_date)
+) ENGINE=InnoDB
+PARTITION BY RANGE (YEAR(sale_date)) (
+    PARTITION p2024 VALUES LESS THAN (2025),
+    PARTITION p2025 VALUES LESS THAN (2026),
+    PARTITION p2026 VALUES LESS THAN (2027),
+    PARTITION p_max VALUES LESS THAN MAXVALUE
+);
+
+INSERT INTO sales_history VALUES
+(1, '2024-05-10', 1000.00),
+(2, '2025-08-15', 2500.00),
+(3, '2026-03-20', 3200.00);

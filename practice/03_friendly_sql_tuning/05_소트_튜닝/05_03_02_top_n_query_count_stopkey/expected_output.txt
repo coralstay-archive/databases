@@ -1,0 +1,6 @@
+| Id  | Operation                     | Name                |
+|   0 | SELECT STATEMENT              |                     |
+|*  1 |  COUNT STOPKEY                |                     |
+|   2 |   VIEW                        |                     |
+|   3 |    TABLE ACCESS BY INDEX ROWID| NOTICE_ARTICLE      |
+|*  4 |     INDEX RANGE SCAN          | IDX_NOTICE_CAT_DATE |

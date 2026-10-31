@@ -1,0 +1,3 @@
+-- @engine: mysql
+-- [사전 준비 스키마 및 Mock Data]
+-- 복제 상태 점검 환경

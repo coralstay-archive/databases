@@ -1,0 +1,3 @@
+Predicate Information (identified by operation id):
+---------------------------------------------------
+   2 - access("USER_NO"=1001)

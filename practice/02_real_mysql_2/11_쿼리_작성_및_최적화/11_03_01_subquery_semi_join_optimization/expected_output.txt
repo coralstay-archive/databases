@@ -1,0 +1,3 @@
+-> Nested loop inner join
+    -> Table scan on d
+    -> Single-row index lookup on <subquery2> using <auto_distinct_key>

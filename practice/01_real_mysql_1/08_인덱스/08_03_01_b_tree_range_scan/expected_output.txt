@@ -1,0 +1,1 @@
+-> Index range scan on employees using idx_name

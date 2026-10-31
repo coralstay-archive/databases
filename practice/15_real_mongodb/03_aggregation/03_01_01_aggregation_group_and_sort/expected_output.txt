@@ -1,0 +1,4 @@
+[
+  { _id: 'abc1', total: 150, count: 2 },
+  { _id: 'xyz1', total: 75, count: 1 }
+]

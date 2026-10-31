@@ -1,0 +1,22 @@
+-- @engine: multi
+-- [사전 준비 스키마 및 Mock Data]
+CREATE TABLE dept (
+    deptno INT PRIMARY KEY,
+    dname VARCHAR(14),
+    loc VARCHAR(13)
+);
+
+CREATE TABLE emp (
+    empno INT PRIMARY KEY,
+    ename VARCHAR(10),
+    deptno INT
+);
+
+INSERT INTO dept VALUES (10, 'ACCOUNTING', 'NEW YORK');
+INSERT INTO dept VALUES (20, 'RESEARCH', 'DALLAS');
+INSERT INTO dept VALUES (30, 'SALES', 'CHICAGO');
+INSERT INTO dept VALUES (40, 'OPERATIONS', 'BOSTON');
+
+INSERT INTO emp VALUES (7369, 'SMITH', 20);
+INSERT INTO emp VALUES (7499, 'ALLEN', 30);
+INSERT INTO emp VALUES (7521, 'WARD', 30);

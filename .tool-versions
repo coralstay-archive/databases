@@ -1,0 +1,4 @@
+python 3.12.13
+# @oss python  sqlfluff         4.3.0
+# @oss infra   podman           v6.1.4
+# @oss infra   docker-compose   v5.6.1

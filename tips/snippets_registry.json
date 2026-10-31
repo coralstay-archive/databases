@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "snippets": {
+    "practice/01_real_mysql_1/01_소개/01_01_01_mysql_version_and_features/main.sql::main_L1": {
+      "code_sha256": "c8a7661d99412a4e0e117a915d47d63506541bb8e0d2518f63e314601aaa94c0",
+      "description": "main_L1",
+      "file_path": "practice/01_real_mysql_1/01_소개/01_01_01_mysql_version_and_features/main.sql",
+      "language": "sql",
+      "line_number": 1,
+      "reviewer": "",
+      "status": "PENDING_REVIEW",
+      "symbol": "main_L1",
+      "verified_at": "",
+      "verified_sha256": ""
+    }
+  }
+}

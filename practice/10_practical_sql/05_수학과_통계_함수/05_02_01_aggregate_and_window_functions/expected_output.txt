@@ -1,0 +1,8 @@
+school        | first_name | last_name | salary | school_rank | school_avg_sal | diff_from_avg 
+---------------------+------------+-----------+--------+-------------+----------------+---------------
+ F.D. Roosevelt HS   | Lee        | Reynolds  |  65000 |           1 |       46566.67 |      18433.33
+ F.D. Roosevelt HS   | Kathleen   | Roush     |  38500 |           2 |       46566.67 |      -8066.67
+ F.D. Roosevelt HS   | Janet      | Smith     |  36200 |           3 |       46566.67 |     -10366.67
+ Myers Middle School | Samantha   | Bush      |  56200 |           1 |       47033.33 |       9166.67
+ Myers Middle School | Samuel     | Cole      |  43500 |           2 |       47033.33 |      -3533.33
+ Myers Middle School | Betty      | Diaz      |  41400 |           3 |       47033.33 |      -5633.33

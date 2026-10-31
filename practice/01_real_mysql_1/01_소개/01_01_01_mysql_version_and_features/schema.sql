@@ -1,0 +1,3 @@
+-- @engine: mysql
+-- [사전 준비 스키마 및 Mock Data]
+-- MySQL 엔진 상태 확인용 기본 쿼리

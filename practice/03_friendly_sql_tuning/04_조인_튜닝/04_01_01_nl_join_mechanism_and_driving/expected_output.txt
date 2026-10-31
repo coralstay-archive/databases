@@ -1,0 +1,6 @@
+| Id  | Operation                     | Name           |
+|   0 | SELECT STATEMENT              |                |
+|   1 |  NESTED LOOPS                 |                |
+|*  2 |   TABLE ACCESS FULL           | TBL_DEPARTMENT |
+|   3 |   TABLE ACCESS BY INDEX ROWID | TBL_EMPLOYEE   |
+|*  4 |    INDEX RANGE SCAN           | IDX_EMP_DEPT   |

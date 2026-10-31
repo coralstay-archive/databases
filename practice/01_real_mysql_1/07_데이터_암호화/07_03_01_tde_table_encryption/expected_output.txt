@@ -1,0 +1,5 @@
+CREATE TABLE `secure_card_info` (
+  `card_id` int NOT NULL,
+  `card_hash` varchar(64) NOT NULL,
+  PRIMARY KEY (`card_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4

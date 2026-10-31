@@ -1,0 +1,4 @@
+| Id  | Operation          | Name           |
+|   0 | SELECT STATEMENT   |                |
+|   1 |  HASH GROUP BY     |                |
+|   2 |   TABLE ACCESS FULL| PERF_BENCHMARK |

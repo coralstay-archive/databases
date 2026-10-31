@@ -1,0 +1,4 @@
+MEMBER_ID MEMBER_EMAIL
+---------- --------------------------------------------------
+       101 user1@example.com
+       103 user3@example.com

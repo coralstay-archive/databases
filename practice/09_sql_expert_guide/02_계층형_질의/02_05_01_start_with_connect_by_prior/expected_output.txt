@@ -1,0 +1,9 @@
+LEVEL EMP_TREE                  EMPNO        MGR    IS_LEAF PATH_STR
+---------- -------------------- ---------- ---------- ---------- --------------------
+         1 KING                       7839                     0 /KING
+         2    BLAKE                   7698       7839          1 /KING/BLAKE
+         2    CLARK                   7782       7839          1 /KING/CLARK
+         2    JONES                   7566       7839          0 /KING/JONES
+         3       FORD                 7902       7566          0 /KING/JONES/FORD
+         4          SMITH             7369       7902          1 /KING/JONES/FORD/SMITH
+         3       SCOTT                7788       7566          1 /KING/JONES/SCOTT

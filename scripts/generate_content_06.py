@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Generator for Content 06: 오라클 성능 고도화 (소트튜닝과 파티션 병렬처리)
+-> practice/06_oracle_adv_sort_partition/
+"""
+
+import argparse
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from scripts.scaffold_engine import scaffold_content, verify_content
+from scripts.content06_data import ITEMS
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate practice scaffolds for Content 06")
+    parser.add_argument("--force", action="store_true", help="기존 main.sql 파일도 강제로 덮어쓰기")
+    parser.add_argument("--verify", action="store_true", help="target_code 유효성 전수 검증")
+    args = parser.parse_args()
+
+    if args.verify:
+        verify_content("06", ITEMS)
+    else:
+        scaffold_content("06", ITEMS, force=args.force)
+
+if __name__ == "__main__":
+    main()

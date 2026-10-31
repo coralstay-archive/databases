@@ -1,0 +1,4 @@
+| Id  | Operation                   | Name              |
+|   0 | SELECT STATEMENT            |                   |
+|   1 |  TABLE ACCESS BY INDEX ROWID| CONTRACTS_BASIC   |
+|*  2 |   INDEX RANGE SCAN          | IDX_CONTRACT_DATE |
